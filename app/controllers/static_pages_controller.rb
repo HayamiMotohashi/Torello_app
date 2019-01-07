@@ -13,5 +13,6 @@ class StaticPagesController < ApplicationController
     @card.detail = params[:card][:detail]
     @card.comment = params[:card][:comment]
     @card.save
+    redirect_to '/'
   end
 end
