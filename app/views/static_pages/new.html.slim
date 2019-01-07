@@ -1,0 +1,10 @@
+- @card = Card.new unless @card
+
+= form_for(@card) do |f|
+  = f.label :title
+  = f.text_field :title
+  = f.label :detail
+  = f.text_area :detail
+  = f.label :comment
+  = f.text_area :comment
+  = f.submit
