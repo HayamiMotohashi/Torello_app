@@ -13,6 +13,6 @@ class StaticPagesController < ApplicationController
     @card.detail = params[:card][:detail]
     @card.comment = params[:card][:comment]
     @card.save
-    redirect_to '/'
+    redirect_to root_path
   end
 end
