@@ -3,29 +3,26 @@
     | Torello タスク管理Web Application
   p
     | これはTorelloを参考にしたタスク管理のwebアプリケーションです。
+
   .list_view
-    - @lists.each do |list|
+    - @cards.each do |card|
       ul
         li
           | タイトル：
-          = list.title
+          = card.title
         li
           | 作成日時：
-          = list.created_at
-        - @cards.each do |card|
-          ur
-            li
-              | タイトル：
-              = card.title
-            li
-              | 詳細：
-              = card.detail
-            li
-              | コメント：
-              = card.comment
+          = card.created_at
+
+        li
+          | 詳細：
+          = card.detail
+        li
+          | コメント：
+          = card.comment
             /li
             /  | チェックリスト：
             /  =
 
 a
-  = link_to "新たなカードの作成",   new_path
+  = link_to "新たなカードを作成", new_path
