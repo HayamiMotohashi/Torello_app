@@ -1,12 +1,20 @@
+javascript:
+  src="application.js"
+  src="Sortable.min.js"
+
+
+
 .container
-  h1
-    | Torello タスク管理Web Application
+
+  .title
+    h1
+      | Torello タスク管理Web Application
   p
     | これはTorelloを参考にしたタスク管理のwebアプリケーションです。
 
   .list_view
     - @cards.each do |card|
-      ul
+      ul {#list}
         li
           | タイトル：
           = card.title
@@ -25,5 +33,6 @@
             /  =
 
         = link_to '編集', edit_static_page_path(card.id)
+        = link_to '', edit_static_page_path(card.id)
 a
   = link_to "新たなカードを作成", new_path

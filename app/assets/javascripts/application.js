@@ -14,3 +14,25 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+ // alert('JavaScriptのアラート');
+
+
+ // document.getElementsByClassName("title").onclick = function() {
+ //   alert('This is Torello app');
+ // };
+
+
+ // document.getElementsByClassName('title')[0].addEventListener('click', function() {
+ //   alert('This is Torello app');
+ // });
+
+ // alert('JavaScriptのアラート');
+
+//  $(function() {
+//     $('#sample').sortable();
+// });
+
+
+Sortable.create(list);
